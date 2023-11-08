@@ -1,0 +1,11 @@
+// Import abstract files
+@import "./abstract/mixins";
+
+// Import base files
+@import "./base/base";
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Import pages files
+@import "./pages/home";
