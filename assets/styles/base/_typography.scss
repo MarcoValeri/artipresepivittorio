@@ -1,0 +1,38 @@
+// Links
+.link {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: $white;
+    }
+
+    &__no-style {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// Logo
+.logo {
+    font-size: 5rem;
+    color: $white;
+}
+
+// Tags Font Size
+.p {
+    font-size: 1.6rem;
+
+    &__xl {
+        font-size: 2.2rem;
+    }
+
+    &__l {
+        font-size: 2rem;
+    }
+}

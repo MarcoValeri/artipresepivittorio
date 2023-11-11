@@ -1,11 +1,11 @@
 // Import abstract files
 @import "./abstract/mixins";
+@import "./abstract/variables";
 
 // Import base files
 @import "./base/base";
-
-// Import Bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import "./base/font";
+@import "./base/typography";
 
 // Import layout files
 @import "./layout/header";

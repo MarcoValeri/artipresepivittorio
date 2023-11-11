@@ -14,17 +14,18 @@
     </head>
     <body>
         <header class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Negozio</a></li>
-                            <li><a href="#">Chi Sono</a></li>
-                            <li><a href="#">Contatti</a></li>
-                        </ul>
-                    </div>
+            <div class="header__container-menu">
+                <div class="header__container-logo">
+                    <h1 class="logo">Arti Presepi Vittorio</h1>
                 </div>
+                <nav class="nav">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item"><a class="link p__xl" href="#">Home</a></li>
+                        <li class="nav__menu-item"><a class="link p__xl" href="#">Negozio</a></li>
+                        <li class="nav__menu-item"><a class="link p__xl" href="#">Chi Sono</a></li>
+                        <li class="nav__menu-item"><a class="link p__xl" href="#">Contatti</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         {% block body %}{% endblock %}

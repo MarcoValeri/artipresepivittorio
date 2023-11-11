@@ -1,0 +1,12 @@
+.nav {
+    text-align: center;
+
+    &__menu {
+        list-style: none;
+    }
+
+    &__menu-item {
+        display: inline-block;
+        padding: 1rem;
+    }
+}
