@@ -1,0 +1,17 @@
+.footer {
+    height: 20vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 3rem;
+    background-color: $red;
+
+    &__container-credits {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    &__credits {
+        color: $white;
+    }
+}

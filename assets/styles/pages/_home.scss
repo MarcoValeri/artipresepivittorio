@@ -2,6 +2,7 @@
     &__container-carousel {
         position: relative;
         height: 50vh;
+        background-color: $red;
 
         @include respond('md') {
             height: 65vh;
@@ -21,7 +22,7 @@
         width: 100%;
         top: 0;
         left: 0;
-        transition: all .5s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 
     &__carousel-slide--no-active {

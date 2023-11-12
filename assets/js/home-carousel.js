@@ -6,7 +6,6 @@ const homeCarouselSlideThree = document.getElementById('home-carousel-slide-thre
 let showSlide = 1;
 setInterval(() => {
     showSlide++;
-    console.log(showSlide);
 
     if (showSlide === 1) {
         homeCarouselSlideOne.classList.remove('home__carousel-slide--no-active');
