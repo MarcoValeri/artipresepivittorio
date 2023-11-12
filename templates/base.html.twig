@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {% block stylesheets %}
@@ -14,11 +15,16 @@
     </head>
     <body>
         <header class="header">
-            <div class="header__container-menu">
+            <div>
+                <di id="header-container-menu-icon" class="header__container-menu-icon">
+                    <span id="header-menu-icon-one" class="header__icon-line header__icon-line-one"></span>
+                    <span id="header-menu-icon-two" class="header__icon-line header__icon-line-two"></span>
+                    <span id="header-menu-icon-three" class="header__icon-line header__icon-line-three"></span>
+                </div>
                 <div class="header__container-logo">
                     <h1 class="logo">Arti Presepi Vittorio</h1>
                 </div>
-                <nav class="nav">
+                <nav id="header-nav" class="nav">
                     <ul class="nav__menu">
                         <li class="nav__menu-item"><a class="link p__xl" href="#">Home</a></li>
                         <li class="nav__menu-item"><a class="link p__xl" href="#">Negozio</a></li>

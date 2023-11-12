@@ -1,12 +1,31 @@
 .nav {
     text-align: center;
 
+    @include respond('md') {
+        display: none;
+        position: relative;
+    }
+
+    &__active {
+        display: block;
+    }
+
     &__menu {
         list-style: none;
+
+        @include respond('md') {
+            position: absolute;
+            width: 100%;
+            background-color: $red;
+        }
     }
 
     &__menu-item {
         display: inline-block;
         padding: 1rem;
+
+        @include respond('md') {
+            display: block;
+        }
     }
 }
