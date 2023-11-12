@@ -1,3 +1,16 @@
+// Button
+.button {
+
+    &__red {
+        font-size: 2rem;
+        color: $white;
+        text-decoration: none;
+        background-color: $red;
+        padding: 2rem;
+        border-radius: 0 25px 0 25px;
+    }
+}
+
 // Links
 .link {
     color: white;
@@ -25,6 +38,27 @@
 }
 
 // Tags Font Size
+.h1 {
+    font-size: 5rem;
+
+    @include respond('md') {
+        font-size: 4rem;
+    }
+
+}
+
+.h2 {
+    font-size: 4rem;
+}
+
+.h3 {
+    font-size: 3rem;
+}
+
+.h4 {
+    font-size: 2.5rem;
+}
+
 .p {
     font-size: 1.6rem;
 

@@ -9,4 +9,5 @@
 import './styles/app.scss';
 
 // Import JS files
+import './js/home-carousel';
 import './js/nav';

@@ -1,5 +1,6 @@
 .nav {
     text-align: center;
+    z-index: 1;
 
     @include respond('md') {
         display: none;

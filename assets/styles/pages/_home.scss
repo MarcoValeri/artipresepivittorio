@@ -1,1 +1,93 @@
-.home {}
+.home {
+    &__container-carousel {
+        position: relative;
+        height: 50vh;
+
+        @include respond('md') {
+            height: 65vh;
+        }
+
+        @include respond('sm') {
+            height: 80vh;
+        }
+
+        @include respond('xs') {
+            height: 100vh;
+        }
+    }
+
+    &__carousel-slide {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    &__carousel-slide--no-active {
+        left: -100%;
+        opacity: 0;
+    }
+
+    &__slide-wrapper {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @include respond('md') {
+            height: 65vh;
+        }
+
+        @include respond('sm') {
+            height: 85vh;
+        }
+
+        @include respond('xs') {
+            height: 100vh;
+        }
+    }
+
+    &__container-slide-title {
+        padding: 2rem 5rem;
+    }
+
+    &__container-slide-button {
+        padding: 2rem 5rem;
+    }
+
+    &__slide-title {
+        color: $white;
+    }
+
+    &__slide-one-wrapper {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+            ),
+            var(--home-background-one);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__slide-two-wrapper {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)),
+            var(--home-background-two);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__slide-three-wrapper {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)),
+            var(--home-background-three);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

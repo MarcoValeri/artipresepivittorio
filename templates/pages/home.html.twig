@@ -2,16 +2,35 @@
 
 {% block body %}
 <div class="home">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <h1>col-6</h1>
+    <div class="home__container-carousel">
+        <div id="home-carousel-slide-one" class="home__carousel-slide">
+            <div class="home__slide-wrapper home__slide-one-wrapper" style="--home-background-one: url({{ asset('/images/albero-di-natale.webp') }})">
+                <div class="home__container-slide-title">
+                    <h2 class="home__slide-title h1">Prodotti artigianali fatti interamente a mano</h2>
+                </div>
+                <div class="home__container-slide-button">
+                    <a class="button__red" href="">Scopri il negozio</a>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <h1>col-6</h1>
+        </div>
+        <div id="home-carousel-slide-two" class="home__carousel-slide home__carousel-slide--no-active">
+            <div class="home__slide-wrapper home__slide-two-wrapper" style="--home-background-two: url({{ asset('/images/albero-di-natale-con-le-luci.webp') }})">
+                <div class="home__container-slide-title">
+                    <h2 class="home__slide-title h1">Idee regalo con oggetti fatti a mano e creazioni artigianali</h2>
+                </div>
+                <div class="home__container-slide-button">
+                    <a class="button__red" href="">Scopri la magia</a>
+                </div>
             </div>
-            <div class="col-12">
-                <h1>col-12</h1>
+        </div>
+        <div id="home-carousel-slide-three" class="home__carousel-slide home__carousel-slide--no-active">
+            <div class="home__slide-wrapper home__slide-three-wrapper" style="--home-background-three: url({{ asset('/images/candela-di-natale.webp') }})">
+                <div class="home__container-slide-title">
+                    <h2 class="home__slide-title h1">Artigianato artistico con statue e pezzi unici</h2>
+                </div>
+                <div class="home__container-slide-button">
+                    <a class="button__red" href="">Lasciati incantare</a>
+                </div>
             </div>
         </div>
     </div>
