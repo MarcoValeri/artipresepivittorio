@@ -9,6 +9,7 @@
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^2.10",
         "doctrine/doctrine-migrations-bundle": "^3.2",
+        "doctrine/migrations": "^3.7",
         "doctrine/orm": "^2.16",
         "symfony/asset": "6.3.*",
         "symfony/console": "6.3.*",
