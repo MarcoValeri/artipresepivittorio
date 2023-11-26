@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div>
+    {% for statue in statues %}
+        <h1>{{ statue.nome }}</h1>
+    {% endfor %}
+</div>
+{% endblock %}

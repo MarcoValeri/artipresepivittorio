@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{# Set Statua's variable #}
+{% if statua %}
+    {% set statuaNome = statua.nome %}
+    {% set statuaUrl = statua.url %}
+    {% set statuaDescrizione = statua.descrizione %}
+    {% set statuaMateriali = statua.materiali %}
+    {% set statuaQuantita = statua.quantita %}
+    {% set statuaPrezzo = statua.prezzo %}
+    {% set statuaSpedizione = statua.spedizione %}
+    {% set statuaImages = statua.getImages %}
+{% endif %}
+
+{% block body %}
+<div class="statua">
+    <h1>{{ statuaNome }}</h1>
+</div>
+{% endblock %}
