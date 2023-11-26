@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\StatuaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -35,20 +37,13 @@ class Statua
     #[ORM\Column]
     private ?float $spedizione = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $foto1 = null;
+    #[ORM\ManyToMany(targetEntity: Image::class, inversedBy: 'statua')]
+    private $images;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $foto2 = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $foto3 = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $foto4 = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $foto5 = null;
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -139,63 +134,28 @@ class Statua
         return $this;
     }
 
-    public function getFoto1(): ?string
+    /**
+     * @return Collection|Image[]
+     */
+    public function getImages(): Collection
     {
-        return $this->foto1;
+        return $this->images;
     }
 
-    public function setFoto1(?string $foto1): static
+    public function addImage(Image $image): self
     {
-        $this->foto1 = $foto1;
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+        }
 
         return $this;
     }
 
-    public function getFoto2(): ?string
+    public function removeImage(Image $image): self
     {
-        return $this->foto2;
-    }
-
-    public function setFoto2(?string $foto2): static
-    {
-        $this->foto2 = $foto2;
+        $this->images->removeElement($image);
 
         return $this;
     }
 
-    public function getFoto3(): ?string
-    {
-        return $this->foto3;
-    }
-
-    public function setFoto3(?string $foto3): static
-    {
-        $this->foto3 = $foto3;
-
-        return $this;
-    }
-
-    public function getFoto4(): ?string
-    {
-        return $this->foto4;
-    }
-
-    public function setFoto4(?string $foto4): static
-    {
-        $this->foto4 = $foto4;
-
-        return $this;
-    }
-
-    public function getFoto5(): ?string
-    {
-        return $this->foto5;
-    }
-
-    public function setFoto5(?string $foto5): static
-    {
-        $this->foto5 = $foto5;
-
-        return $this;
-    }
 }

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ImageRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ImageRepository::class)]
@@ -18,6 +20,14 @@ class Image
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $descrizione = null;
+
+    #[ORM\ManyToMany(targetEntity: Statua::class, mappedBy: 'image')]
+    private $statua;
+
+    public function __construct()
+    {
+        $this->statua = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -46,5 +56,39 @@ class Image
         $this->descrizione = $descrizione;
 
         return $this;
+    }
+
+    /**
+     * @return Collection|Statua[]
+     */
+    public function getStatua(): Collection
+    {
+        return $this->statua;
+    }
+
+    public function addStatua(Statua $statua): self
+    {
+        if (!$this->statua->contains($statua)) {
+            $this->statua[] = $statua;
+            $statua->setImage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStatua(Statua $statua): self
+    {
+        if ($this->statua->removeElement($statua)) {
+            // set the owning side to null (unless already changed)
+            if ($statua->getImage() === $this) {
+                $statua->setImage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function __toString() {
+        return $this->file;
     }
 }
