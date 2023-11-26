@@ -26,10 +26,15 @@
                 </div>
                 <nav id="header-nav" class="nav">
                     <ul class="nav__menu">
-                        <li class="nav__menu-item"><a class="link p__xl" href="#">Home</a></li>
+                        <li class="nav__menu-item"><a class="link p__xl" href="{{ path('app_home') }}">Home</a></li>
                         <li class="nav__menu-item"><a class="link p__xl" href="#">Negozio</a></li>
                         <li class="nav__menu-item"><a class="link p__xl" href="#">Chi Sono</a></li>
                         <li class="nav__menu-item"><a class="link p__xl" href="#">Contatti</a></li>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li class="nav__menu-item">
+                                <a class="link p__xl" href="{{ path('app_admin') }}">Admin</a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </nav>
             </div>

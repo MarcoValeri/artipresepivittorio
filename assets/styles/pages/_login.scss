@@ -1,0 +1,17 @@
+.login {
+    height: 50vh;
+    margin: 5rem auto;
+
+    &__error-container {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__form-wrapper {
+        text-align: center;
+    }
+
+    &__container-input {
+        margin-bottom: 3rem;
+    }
+}

@@ -1,5 +1,6 @@
 // Button
 .button {
+    cursor: pointer;
 
     &__red {
         font-size: 2rem;
@@ -9,6 +10,17 @@
         padding: 2rem;
         border-radius: 0 25px 0 25px;
     }
+}
+
+// Inputs
+.input-text {
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.input-error {
+    color: $redError;
 }
 
 // Links
