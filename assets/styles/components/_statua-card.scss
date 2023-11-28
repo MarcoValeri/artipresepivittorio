@@ -1,0 +1,47 @@
+.statua-card {
+    width: 50rem;
+    overflow: hidden;
+    margin: 0 2rem 5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid $red;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__container-image {
+        width: 100%;
+        height: 30rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__container-title {
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    &__container-description {
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    &__container-quantity {
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    &__container-price {
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    &__menu-price {
+        list-style-type: none;
+    }
+
+    &__container-btn {
+        padding: 4rem 2rem 4rem 2rem;
+    }
+}

@@ -1,0 +1,10 @@
+.statues {
+    padding: 10rem 0;
+
+    &__container-products {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}

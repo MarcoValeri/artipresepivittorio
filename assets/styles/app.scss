@@ -7,6 +7,9 @@
 @import "./base/font";
 @import "./base/typography";
 
+// Import component files
+@import "./components/statua-card";
+
 // Import layout files
 @import "./layout/footer";
 @import "./layout/header";
@@ -15,3 +18,4 @@
 // Import pages files
 @import "./pages/home";
 @import "./pages/login";
+@import "./pages/statues";
