@@ -1,0 +1,22 @@
+.contact {
+    width: 60%;
+    height: auto;
+    min-height: 50vh;
+    margin: 5rem auto;
+
+    @include respond("xl") {
+        width: 90%;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__p {
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        margin-left: 2.5rem;
+    }
+}
