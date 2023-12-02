@@ -41,6 +41,12 @@
             text-decoration: none;
         }
     }
+    
+    &__red {
+        color: $red;
+        text-decoration: underline;
+        text-decoration-color: $red;
+    }
 }
 
 // Logos

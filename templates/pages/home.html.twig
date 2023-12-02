@@ -34,5 +34,19 @@
             </div>
         </div>
     </div>
+    <div class="home__container-negozio">
+        <h2 class="h2">Il Negozio di Vittorio Cusieri</h2>
+        <h4 class="h4">Scopri gli ulitmi lavori</h4>
+        <div class="home__container-button">
+            <a class="button__red" href="{{ path('app_statue', {pageNumber: '0'}) }}">Visita il negozio</a>
+        </div>
+    </div>
+    <div class="home__container-about">
+        <h2 class="h2">Chi è Vittorio Cusieri</h2>
+        <p class="p__l">Lorem Ipsum is simply dummy text of the printing and typesetting industry...<a class="link__red" href="{{ path('app_about') }}">Continua a leggere</a></p>
+        <div class="home__container-button">
+            <a class="button__red" href="{{ path('app_about') }}">Visita il negozio</a>
+        </div>
+    </div>
 </div>
 {% endblock %}

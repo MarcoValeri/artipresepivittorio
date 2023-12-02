@@ -91,4 +91,26 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    &__container-negozio {
+        width: 60%;
+        margin: 5rem auto;
+
+        @include respond("xl") {
+            width: 90%;
+        }
+    }
+
+    &__container-button {
+        margin: 5rem auto;
+    }
+
+    &__container-about {
+        width: 60%;
+        margin: 5rem auto;
+
+        @include respond("xl") {
+            width: 90%;
+        }
+    }
 }
