@@ -1,0 +1,14 @@
+.statua {
+    margin: 5rem 0;
+    border: 2px solid #00d;
+
+    &__container-title {
+        text-align: center;
+    }
+
+    &__container-description {
+        width: 60%;
+        font-size: 2rem;
+        margin: auto;
+    }
+}

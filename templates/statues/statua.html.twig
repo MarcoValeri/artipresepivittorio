@@ -14,6 +14,11 @@
 
 {% block body %}
 <div class="statua">
-    <h1>{{ statuaNome }}</h1>
+    <div class="statua__container-title">
+        <h1 class="h1">{{ statuaNome }}</h1>
+    </div>
+    <div class="statua__container-description">
+        {{ statuaDescrizione|raw }}
+    </div>
 </div>
 {% endblock %}
